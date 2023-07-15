@@ -6,6 +6,7 @@ import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import Button from "./Button";
+import useAuthModal from "@/hooks/useAuthModal";
 
 interface PropsType {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ interface PropsType {
 
 const Header: React.FC<PropsType> = ({ children, className }) => {
   const router = useRouter();
+  const authModal = useAuthModal();
 
   const handleLogout = () => {
     // logout
@@ -52,14 +54,17 @@ const Header: React.FC<PropsType> = ({ children, className }) => {
           <div>
             <Button
               className="bg-transparent text-neutral-300 font-medium"
-              onClick={() => {}}
+              onClick={authModal.onOpen}
             >
               Sign Up
             </Button>
           </div>
           <div>
-            <Button className="bg-white px-6 py-2" onClick={() => {}}>
-              Login
+            <Button
+              className="bg-white px-6 py-2 text-black font-semibold rounded-full"
+              onClick={authModal.onOpen}
+            >
+              Log in
             </Button>
           </div>
         </div>
