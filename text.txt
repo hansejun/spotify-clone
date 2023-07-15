@@ -1,0 +1,9 @@
+1. npx create-next-app@latest . 
+
+2. npm install tailwind-merge
+
+3. useRouter는 next/navigation으로 사용해야함
+
+4. 커스텀 Button interface 확장. Button 컴포넌트 확인
+
+5. 
