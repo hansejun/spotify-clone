@@ -1,5 +1,4 @@
-import { Subscription } from "../types";
-import { UserDetails } from "@/types";
+import { UserDetails, Subscription } from "@/types";
 import { User } from "@supabase/auth-helpers-nextjs";
 import {
   useSessionContext,
