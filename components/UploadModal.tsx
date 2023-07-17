@@ -13,10 +13,10 @@ import { useRouter } from "next/navigation";
 
 const UploadModal = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const uploadModal = useUploadModal();
+  const router = useRouter();
   const { user } = useUser();
   const supabaseClient = useSupabaseClient();
-  const router = useRouter();
+  const uploadModal = useUploadModal();
 
   const { register, handleSubmit, reset } = useForm<FieldValues>({
     defaultValues: {
