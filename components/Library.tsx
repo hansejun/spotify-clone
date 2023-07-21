@@ -17,6 +17,7 @@ const Library = ({ songs }: PropsType) => {
   const authModal = useAuthModal();
   const uploadModal = useUploadModal();
   const { user } = useUser();
+
   const onPlay = useOnPlay(songs);
 
   const onClick = () => {
