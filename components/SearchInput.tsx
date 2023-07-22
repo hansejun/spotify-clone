@@ -11,7 +11,6 @@ const SearchInput = () => {
   const [value, setValue] = useState<string>("");
   const debounceValue = useDebounce<string>(value, 500);
 
-  console.log(debounceValue);
   useEffect(() => {
     const query = {
       title: debounceValue,
