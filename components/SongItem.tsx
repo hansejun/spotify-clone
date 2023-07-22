@@ -13,7 +13,7 @@ interface PropsType {
 
 const SongItem = ({ data, onClick }: PropsType) => {
   const imagePath = useLoadImage(data);
-  console.log(data);
+
   return (
     <div
       onClick={() => onClick(data.id)}
